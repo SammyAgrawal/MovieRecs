@@ -1,0 +1,18 @@
+{% extends 'movies/base.html' %}
+{% load static %}
+
+{%block content %}
+
+<div class="jumbotron">
+    <h1>Welcome to MovieRex! </h1>
+
+    <p>Top 5 highest rated movies to check out:</p>
+    <ul>
+        {% for movie in top_movies %}
+        <li> {{movie.title}} </li>
+        {%endfor%}
+    </ul>
+</div>
+
+
+{% endblock %}
